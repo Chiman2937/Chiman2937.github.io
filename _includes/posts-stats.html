@@ -1,0 +1,16 @@
+<div class="sidebar__right">
+  <nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-chart-bar"></i> 블로그 통계</h4></header>
+    <ul class="toc__menu">
+      <li>📝 총 {{ site.posts.size }}개의 포스트</li>
+      <li>📂 {{ site.categories.size }}개의 카테고리</li>
+    </ul>
+    
+    <header><h4 class="nav__title"><i class="fas fa-folder"></i> 카테고리</h4></header>
+    <ul class="toc__menu">
+    {% for category in site.categories %}
+      <li><a href="/categories/#{{ category[0] | slugify }}">{{ category[0] }} ({{ category[1].size }})</a></li>
+    {% endfor %}
+    </ul>
+  </nav>
+</div>

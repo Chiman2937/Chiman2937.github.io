@@ -119,24 +119,14 @@ author:
   location         : "Osan, Gyeonggi-do"
   email            : "cyga2933@gmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "cyga2933@gmail.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+    - label: "{{ site.posts.size }} Posts"
+      icon: "fas fa-fw fa-file-alt"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Chiman2937"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:cyga2933@gmail.com"
 
 # Site Footer
 footer:
@@ -325,3 +315,8 @@ defaults:
       comments: # true
       share: true
       related: true
+      sidebar:
+        - title: "블로그 통계"
+          text: "📝 총 {{ site.posts.size }}개의 포스트<br>📂 {{ site.categories.size }}개의 카테고리"
+        - title: "카테고리"
+          nav: "categories"
