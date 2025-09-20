@@ -13,9 +13,5 @@ main:
 
 # sidebar categories
 categories:
-{% for category in site.categories %}
-  - title: "{{ category[0] }}"
-    url: "/categories/#{{ category[0] | slugify }}"
-    children:
-      - title: "{{ category[1].size }}개의 포스트"
-{% endfor %}
+  - title: "Blog"
+    url: "/categories/#blog"
